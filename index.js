@@ -1,7 +1,7 @@
 const validateUser = async (email) => {
   try {
     const result = await fetch(
-      `https://mp-wallet-app-api.herokuapp.com/users?email${email}`
+      `https://mp-wallet-app-api.herokuapp.com/users?email=${email}`
     );
     const user = await result.json();
     return user;
@@ -22,7 +22,7 @@ const onClickLogin = async () => {
     return;
   }
   localStorage.setItem("@WalletApp:userEmail", result.email);
-  localStorage.setItem("@WalletApp:userEmail", result.name);
-  localStorage.setItem("@WalletApp:userEmail", result.id);
+  localStorage.setItem("@WalletApp:userName", result.name);
+  localStorage.setItem("@WalletApp:userId", result.id);
   window.open("./pages/home/index.html", "_self");
 };
