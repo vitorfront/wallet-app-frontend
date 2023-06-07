@@ -19,10 +19,6 @@
   height: 72px;
   width: 100vw;
   background-color: #ffffff;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
   padding: 24px 122px;
   box-sizing: border-box;
 }
@@ -31,7 +27,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 280px;
+  width: 290px;
   height: 100%;
 }
 .navbar-user-avatar {
@@ -42,4 +38,23 @@
   width: 48px;
   border-radius: 24px;
   background-color: #9cdbbe;
+}
+.finance-card-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 48px 122px;
+  box-sizing: border-box;
+}
+.finance-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 140px;
+  border-radius: 24px;
+  background-color: #ffffff;
 }
