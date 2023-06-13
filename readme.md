@@ -1,6 +1,6 @@
 # Wallet App
 
-<img src="https://github.com/vitorfront/wallet-app-frontend/blob/main/img/preview.png" alt="Wallet Preview" height="400" width="600">
+<img src="https://github.com/vitorfront/wallet-app-frontend/blob/main/img/preview.png" alt="Wallet Preview" height="300">
 
 ## Introduction
 
