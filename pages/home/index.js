@@ -1,3 +1,23 @@
+const onLogout = () => {
+  localStorage.clear();
+  window.open("../../index.html", "_self");
+};
+
+const onDeleteItem = async (id) => {
+  try {
+    const email = localStorage.getItem("@WalletApp:userEmail");
+    await fetch(`https://mp-wallet-app-api.herokuapp.com/finances/${id}`, {
+      method: "DELETE",
+      headers: {
+        email: email,
+      },
+    });
+    onLoadFinancesData();
+  } catch (eror) {
+    alert("Error ao deletar item.");
+  }
+};
+
 const renderFinancesList = (data) => {
   const table = document.getElementById("finances-table");
   table.innerHTML = "";
@@ -72,6 +92,8 @@ const renderFinancesList = (data) => {
     // delete
 
     const deleteTd = document.createElement("td");
+    deleteTd.style.cursor = "pointer";
+    deleteTd.onclick = () => onDeleteItem(item.id);
     deleteTd.className = "right";
     const deleteText = document.createTextNode("Deletar");
     deleteTd.appendChild(deleteText);
@@ -112,7 +134,7 @@ const renderFinanceElements = (data) => {
   const financeCard2 = document.getElementById("finance-card-2");
   financeCard2.innerHTML = "";
 
-  const revenueSubtext = document.createTextNode("Receitas");
+  const revenueSubtext = document.createTextNode("Valor ganho");
   const revenueSubtextElement = document.createElement("h3");
   revenueSubtextElement.appendChild(revenueSubtext);
   financeCard2.appendChild(revenueSubtextElement);
@@ -154,7 +176,7 @@ const renderFinanceElements = (data) => {
   const financeCard4 = document.getElementById("finance-card-4");
   financeCard4.innerHTML = "";
 
-  const balanceSubtext = document.createTextNode("Balanço");
+  const balanceSubtext = document.createTextNode("Valor total");
   const balanceSubtextElement = document.createElement("h3");
   balanceSubtextElement.appendChild(balanceSubtext);
   financeCard4.appendChild(balanceSubtextElement);
@@ -175,10 +197,10 @@ const renderFinanceElements = (data) => {
 
 const onLoadFinancesData = async () => {
   try {
-    const date = "2023-06-06";
+    const dateInputValue = document.getElementById("select-date").value;
     const email = localStorage.getItem("@WalletApp:userEmail");
     const result = await fetch(
-      `https://mp-wallet-app-api.herokuapp.com/finances?date=${date}`,
+      `https://mp-wallet-app-api.herokuapp.com/finances?date=${dateInputValue}`,
       {
         method: "GET",
         headers: {
@@ -302,7 +324,17 @@ const onCreateFinanceRelease = async (target) => {
   }
 };
 
+const setInitialdate = () => {
+  const dateInput = document.getElementById("select-date");
+  const nowDate = new Date().toISOString().split("T")[0];
+  dateInput.value = nowDate;
+  dateInput.addEventListener("change", () => {
+    onLoadFinancesData();
+  });
+};
+
 window.onload = () => {
+  setInitialdate();
   onLoadUserInfo();
   onLoadFinancesData();
   onLoadCategories();
