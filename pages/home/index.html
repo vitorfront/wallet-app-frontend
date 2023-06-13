@@ -19,18 +19,10 @@
         </div>
       </div>
       <div class="finance-card-container">
-        <div id="finance-card-1 " class="finance-card">
-          <h3>Total de lançamentos</h3>
-        </div>
-        <div id="finance-card-2 " class="finance-card">
-          <h3>Salário</h3>
-        </div>
-        <div id="finance-card-3 " class="finance-card">
-          <h3>Despesas</h3>
-        </div>
-        <div id="finance-card-4 " class="finance-card">
-          <h3>Valor Total</h3>
-        </div>
+        <div id="finance-card-1" class="finance-card"></div>
+        <div id="finance-card-2" class="finance-card"></div>
+        <div id="finance-card-3" class="finance-card"></div>
+        <div id="finance-card-4" class="finance-card"></div>
       </div>
       <div class="table-container">
         <div class="table-content-container">
@@ -38,15 +30,7 @@
             <h2>Últimos lançamentos</h2>
             <button onclick="onOpenModal()" class="small">Adicionar</button>
           </div>
-          <table id="finances-table">
-            <tr>
-              <th>Título</th>
-              <th>Categoria</th>
-              <th>Data</th>
-              <th class="center">Valor</th>
-              <th class="right">Ação</th>
-            </tr>
-          </table>
+          <table id="finances-table"></table>
         </div>
       </div>
     </div>
@@ -56,7 +40,7 @@
           <h3>Adicionar lançamentos</h3>
           <button onclick="onCloseModal()" class="small">Fechar</button>
         </div>
-        <form id="form-register" class="mt">
+        <form id="form-finance-release" class="mt">
           <label class="mt" for="input-title">Título:</label>
           <input
             placeholder="Ex: Conta de energia"
@@ -72,7 +56,8 @@
             class="mt smaller"
             id="input-value"
             name="input-value"
-            type="text"
+            type="number"
+            step="any"
             required
           />
           <label class="mt larger" for="input-date">Data:</label>
