@@ -159,7 +159,6 @@ const renderFinanceElements = (data) => {
   const expensesSubtextElement = document.createElement("h3");
   expensesSubtextElement.appendChild(expensesSubtext);
   financeCard3.appendChild(expensesSubtextElement);
-
   const expensesText = document.createTextNode(
     new Intl.NumberFormat("pt-BR", {
       style: "currency",
@@ -169,6 +168,7 @@ const renderFinanceElements = (data) => {
   const expensesTextElement = document.createElement("h1");
   expensesTextElement.id = "expenses-element";
   expensesTextElement.className = "mt smaller";
+  expensesTextElement.style.color = "red";
   expensesTextElement.appendChild(expensesText);
   financeCard3.appendChild(expensesTextElement);
 
