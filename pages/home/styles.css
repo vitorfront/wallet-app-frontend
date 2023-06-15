@@ -12,6 +12,10 @@
   height: 24px;
   width: auto;
 }
+.logo-footer {
+  height: 80px;
+  width: auto;
+}
 .navbar-calendar-container {
   display: flex;
   flex-direction: row;
@@ -53,7 +57,7 @@
   height: 48px;
   width: 48px;
   border-radius: 24px;
-  background-color: #b1b1b1;
+  background-color: #bf96cc;
 }
 .finance-card-container {
   display: flex;
@@ -72,6 +76,8 @@
   width: 250px;
   height: 140px;
   border-radius: 24px;
+  border-style: solid;
+  border-color: #8e67ce;
   background-color: #b1b1b1;
 }
 .table-container {
@@ -90,7 +96,9 @@
   align-items: flex-start;
   justify-content: flex-start;
   background-color: #b1b1b1;
-  border-radius: 24px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #8e67ce;
   height: 592px;
   padding: 24px;
 }
@@ -103,6 +111,18 @@
   justify-content: space-between;
   padding-bottom: 24px;
   box-sizing: border-box;
+}
+body {
+  background-color: black;
+}
+footer {
+  display: flex;
+  width: 100vw;
+  height: 156px;
+  background-color: #8e67ce;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
 }
 table {
   width: 100%;
