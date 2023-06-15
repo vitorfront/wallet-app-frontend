@@ -86,6 +86,7 @@ const renderFinancesList = (data) => {
         currency: "BRL",
       }).format(item.value)
     );
+
     valueTd.appendChild(valueText);
     tableRow.appendChild(valueTd);
 
