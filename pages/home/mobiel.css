@@ -1,16 +1,1 @@
-.finance-card-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 30px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-.finance-card {
-  margin-inline: 10px;
-}
-.logo-navbar {
-  height: 35px;
-  width: auto;
-}
+

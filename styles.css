@@ -63,7 +63,7 @@ button {
   cursor: pointer;
 }
 button.small {
-  background-color: #b1b1b1;
+  background-color: #f4f4f9;
   color: #010400;
   font-size: 14px;
   border-radius: 8px;
@@ -71,7 +71,7 @@ button.small {
   height: 36px;
 }
 input {
-  background-color: #b1b1b1;
+  background-color: #f4f4f9;
   width: 100%;
   height: 48px;
   border-color: #06bee1;

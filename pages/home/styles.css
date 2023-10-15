@@ -57,7 +57,7 @@
   height: 48px;
   width: 48px;
   border-radius: 24px;
-  background-color: #bf96cc;
+  background-color: #8fbe81;
 }
 .finance-card-container {
   display: flex;
@@ -76,8 +76,7 @@
   width: 250px;
   height: 140px;
   border-radius: 24px;
-  border-style: solid;
-  border-color: #8e67ce;
+  border-color: #000000;
   background-color: #f4f4f4;
 }
 .table-container {
@@ -97,8 +96,6 @@
   justify-content: flex-start;
   background-color: #f4f4f4;
   border-radius: 10px;
-  border-style: solid;
-  border-color: #8e67ce;
   height: 592px;
   padding: 24px;
 }
