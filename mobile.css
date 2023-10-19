@@ -1,0 +1,25 @@
+@media only screen and (max-device-width: 450px) {
+  .logo {
+    width: 170px;
+  }
+  .auth-content {
+    width: 650px;
+  }
+  h3 {
+    font-size: 34px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  label {
+    font-size: 20px;
+  }
+  input {
+    width: 100%;
+  }
+
+  a {
+    font-size: 20px;
+  }
+}
